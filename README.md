@@ -1,9 +1,5 @@
 # Washoku-House-Mobile 🍣
 
-![Licença](https://img.shields.io/badge/licença-MIT-blue.svg)
-![GitHub issues](https://img.shields.io/github/issues/SEU-USUARIO/Washoku-House-Mobile)
-![GitHub forks](https://img.shields.io/github/forks/SEU-USUARIO/Washoku-House-Mobile)
-![GitHub stars](https://img.shields.io/github/stars/SEU-USUARIO/Washoku-House-Mobile)
 
 >  ✅ Projeto concluído!
 
