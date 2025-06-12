@@ -1,28 +1,14 @@
 # Washoku-House-Mobile 🍣
 
 
->  ✅ Projeto concluído!
-
-<p align="center">
-  Um aplicativo móvel de delivery para um restaurante japonês fictício, desenvolvido com React Native e TypeScript.
-</p>
-
-<p align="center">
-  <a href="#-sobre-o-projeto">Sobre</a> •
-  <a href="#-funcionalidades">Funcionalidades</a> •
-  <a href="#-tecnologias">Tecnologias</a> •
-  <a href="#-autor">Autora</a>
-</p>
-
-
-## 📖 Sobre o Projeto
+> ## 📖 Sobre o Projeto
 
 **Washoku-House-Mobile** é um aplicativo de delivery completo para um restaurante japonês. O projeto foi criado para simular uma experiência de usuário real, desde a autenticação até a finalização do pedido com diferentes métodos de pagamento. O objetivo foi aplicar e aprofundar conhecimentos em desenvolvimento mobile com React Native e TypeScript, focando em uma interface limpa e uma arquitetura de componentes reutilizável. 
 
 
 ---
 
-## ✨ Funcionalidades
+> ## ✨ Funcionalidades
 
 - [x] **Autenticação de Usuário:** Tela de Login para usuários existentes.
 - [x] **Cadastro de Novos Usuários:** Página para criação de conta.
@@ -40,7 +26,7 @@
 
 ---
 
-## 🛠️ Tecnologias
+> ## 🛠️ Tecnologias
 
 As seguintes ferramentas e tecnologias foram utilizadas na construção do projeto:
 
@@ -56,6 +42,6 @@ As seguintes ferramentas e tecnologias foram utilizadas na construção do proje
 ---
 
 
-## 👨‍💻 Autora
+> ## 👨‍💻 Autora
  Desenvolvido Por Raiany Mirella Miranda Oliveira
 
