@@ -1,74 +1,169 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ActivityIndicator } from 'react-native';
+import { useState } from 'react';
+import { useRouter } from 'expo-router';
+import { useAuth } from '../../utils/AuthContext'; 
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+export default function TelaLogin() {
+  const [usuario, setUsuario] = useState('');
+  const [senha, setSenha] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const { validateLogin, login } = useAuth();
 
-export default function HomeScreen() {
+  const handleLogin = async () => {
+    if (!usuario.trim() || !senha.trim()) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos');
+      return;
+    }
+
+    setLoading(true);
+    
+    try {
+      
+      await new Promise(resolve => setTimeout(resolve, 800));
+      
+      const isValid = validateLogin(usuario.trim(), senha);
+      
+      if (isValid) {
+        login(usuario.trim());
+        router.push('/home');
+      } else {
+        Alert.alert('Erro de login', 'Usuário ou senha incorretos');
+      }
+    } catch (error) {
+      Alert.alert('Erro', 'Ocorreu um erro ao fazer login. Tente novamente.');
+      console.error('Erro no login:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const navigateToRegister = () => {
+    router.push('/register');
+  };
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <View style={styles.container}>
+      <Text style={styles.title}>🍣 Washoku House - Login</Text>
+
+      <TextInput
+        placeholder="Usuário"
+        placeholderTextColor="#888"
+        value={usuario}
+        onChangeText={setUsuario}
+        style={styles.input}
+        autoCapitalize="none"
+        editable={!loading}
+      />
+
+      <TextInput
+        placeholder="Senha"
+        placeholderTextColor="#888"
+        secureTextEntry
+        value={senha}
+        onChangeText={setSenha}
+        style={styles.input}
+        editable={!loading}
+      />
+
+      <TouchableOpacity 
+        style={[styles.button, loading && styles.buttonDisabled]} 
+        onPress={handleLogin}
+        disabled={loading}
+      >
+        {loading ? (
+          <ActivityIndicator color="#fff" />
+        ) : (
+          <Text style={styles.buttonText}>Entrar</Text>
+        )}
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.linkButton} 
+        onPress={navigateToRegister}
+        disabled={loading}
+      >
+        <Text style={styles.linkText}>Não tem conta? Cadastre-se</Text>
+      </TouchableOpacity>
+
+   
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    padding: 20, 
+    backgroundColor: '#111' 
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  title: { 
+    fontSize: 20, 
+    marginBottom: 24, 
+    textAlign: 'center', 
+    fontWeight: 'bold', 
+    color: '#D90429' 
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  input: { 
+    borderWidth: 1, 
+    borderColor: 'lightgray', 
+    borderRadius: 10, 
+    padding: 12, 
+    marginBottom: 16, 
+    color: 'white', 
+    backgroundColor: '#222' 
   },
+  button: { 
+    backgroundColor: 'darkgreen', 
+    padding: 15, 
+    borderRadius: 10, 
+    marginTop: 15, 
+    width: '100%', 
+    alignItems: 'center', 
+    backgroundColor: '#930d0d',
+  },
+  buttonDisabled: {
+    backgroundColor: '#666'
+  },
+  buttonText: { 
+    color: '#fff', 
+    textAlign: 'center', 
+    fontWeight: 'bold', 
+    fontSize: 16 
+  },
+  linkButton: {
+    marginTop: 20,
+    padding: 10,
+    alignItems: 'center'
+   
+  },
+  linkText: {
+    color: '#D90429',
+    fontSize: 16,
+    textDecorationLine: 'underline'
+  },
+  testUsers: {
+    marginTop: 30,
+    padding: 15,
+    backgroundColor: '#222',
+    borderRadius: 10,
+    alignItems: 'center'
+  },
+  testUsersTitle: {
+    color: 'white',
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 8
+  },
+  testUsersText: {
+    color: '#ccc',
+    fontSize: 12,
+    marginBottom: 2
+  }
+
 });
+
+
+
+

@@ -1,0 +1,180 @@
+[
+    {
+      "category": "Bebidas",
+      "items": [
+        {
+          "id": 1,
+          "name": "Chá Verde",
+          "description": "Chá verde no copo com limão e gelo",
+          "price": 12.9,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHdccgr89RVlHwXMjuZurD-qpmJj7xE1f1Sg&s"
+        },
+
+        {
+          "id": 2,
+          "name": "Suco Natural",
+          "description": "Suco natural de diversos sabores",
+          "price": 15.9,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnjDpObgDuOzi9R2Xl4uj_WH9J_yXW-wvRNA&s"
+        }, 
+
+        {
+          "id": 3,
+          "name": " Coca-Cola  ",
+          "description": "Lata de 350ml",
+          "price": 5.0,
+          "image": "https://covabra.vtexassets.com/arquivos/ids/158706-800-450?v=638095898220800000&width=800&height=450&aspect=true"
+        }, 
+
+        {
+          "id": 4,
+          "name": " Água Mineral  ",
+          "description": "Garrfa de 510ml",
+          "price": 2.5,
+          "image": "https://drogariamoderna.vtexassets.com/arquivos/ids/250764-800-auto?v=638150164156670000&width=800&height=auto&aspect=true"
+        } 
+
+      ]
+    },
+
+
+
+
+
+
+
+   
+    {
+      "category": "Entradas",
+      "items": [
+        {
+          "id": 5,
+          "name": "Sashimi de Polvo",
+          "description": "Fresco e fatiado com molho especial",
+          "price": 79.9,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqM3OCYMUk-49tiGfZq24bi6UBlrXPMnvYg&s"
+        },
+
+        {
+          "id": 6,
+          "name": "Sunomono",
+          "description": "Salada de pepino japonesa",
+          "price": 59.9,
+          "image": "https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2023/09/24/1049175322-receita-de-sunomono.jpg"
+        },
+
+        {
+          "id": 7,
+          "name": "Shimeji",
+          "description": "Feito com manteiga e shoyu",
+          "price": 80.0,
+          "image": "https://www.receiteria.com.br/wp-content/uploads/shimeji-na-manteiga-e-shoyu.jpg"
+        },
+
+        {
+          "id": 8,
+          "name": "Bolinho de Bacalhau",
+          "description": "Bolinho de bacalhau servido com limão",
+          "price": 70.0,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1auJOpjXpau0-unT_0aYaNwXbzoH7KiedlA&s"
+        }
+      ]
+
+
+
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "category": "Pratos Principais",
+      "items": [
+        {
+          "id": 9,
+          "name": "Camarão Empanado",
+          "description": "Camarão empanado com molho da casa",
+          "price": 59.9,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7EtcTWdvA5Uu5onThaFap-EfvCLq7sgdkSg&s"
+        },
+
+        {
+          "id": 10,
+          "name": "Sushi Misto Simples",
+          "description": "Seleção de sushis tradicionais",
+          "price": 89.9,
+          "image": "https://lh3.googleusercontent.com/proxy/bVDGedch21kI8uHvfgbxdMoi1vyMxXAcZ5z57k_QTFpP7-ZlRvhy2K38u7godplM9f-epQcwAPcW-_gVOvwj1_WwHOy9DXESRo9pMTPh1Un2goopLkH72L34Nmw3iXLVrsMI8gXvGvVmUR0Jk0gGM6uTz8mHSQ"
+        },
+
+        {
+          "id": 11,
+          "name": "Tempurá de Legumes",
+          "description": "Legumes empanados e fritos na massa tempurá",
+          "price": 59.9,
+          "image": "https://www.receiteria.com.br/wp-content/uploads/tempura-de-legumes-11-730x548.jpg"
+        },
+
+        {
+          "id": 12,
+          "name": "Guioza",
+          "description": "Pasteis recheados com carne cozidos. ",
+          "price": 60.0,
+          "image": "https://anamariareceitas.com.br/wp-content/uploads/2024/06/2148809869-768x512.jpg"
+        }
+
+
+      ]
+    },
+
+
+
+
+
+
+
+
+ 
+    {
+      "category": "Sobremesas",
+      "items": [
+        {
+          "id": 13,
+          "name": "Sorvete",
+          "description": "Diversos sabores tradicionais",
+          "price": 17.0,
+          "image": "https://media-cdn.tripadvisor.com/media/photo-p/14/a5/e9/1c/taca-de-sorvete.jpg"
+        },
+
+        {
+          "id": 14,
+          "name": "Banana Flambada",
+          "description": "Banana caramelizada acompanhada de sorvete de creme",
+          "price": 25.0,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKSj4DlLFX7xoOnSCP9kwlW0dR1Ekyi9Uwwg&s"
+        },
+
+        {
+          "id": 15,
+          "name": "Dorayaki",
+          "description": "Panqueca japonesa recheada com morango e creme de avelã",
+          "price": 32.9,
+          "image": "https://www.ferrerofoodservice.com/br/sites/ferrerofoodservice20_br/files/styles/width_1440/public/2019-05/20326165.jpeg?t=1707399920"
+        },
+
+        {
+          "id": 16,
+          "name": "Mousse de Chocolate",
+          "description": "Mousse de chocolate 50% cacau",
+          "price": 15.9,
+          "image": "https://i.ytimg.com/vi/rG1osb8STH0/maxresdefault.jpg"
+        }
+      ]
+    }
+  ]
